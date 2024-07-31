@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Dice Game</div>
+        <div class="scoreboard">
+            <div class="player-section">
+                <h2><img src="images/player.png" alt="Player">You</h2>
+                <div class="dice">
+                    <div class="dice-box">
+                        <p>Dice #1</p>
+                        <img id="player-dice-1" src="images/dice1.png" alt="Player Dice 1">
+                    </div>
+                    <div class="dice-box">
+                        <p>Dice #2</p>
+                        <img id="player-dice-2" src="images/dice1.png" alt="Player Dice 2">
+                    </div>
+                </div>
+                <div class="score">
+                    <div class="score-box">
+                        <p>Score this Round</p>
+                        <p id="player-round-score">0</p>
+                    </div>
+                    <div class="score-box">
+                        <p>Total Score</p>
+                        <p id="player-total-score">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="computer-section">
+                <h2><img src="images/computer.png" alt="Computer">Opponent</h2>
+                <div class="dice">
+                    <div class="dice-box">
+                        <p>Dice #1</p>
+                        <img id="computer-dice-1" src="images/dice1.png" alt="Computer Dice 1">
+                    </div>
+                    <div class="dice-box">
+                        <p>Dice #2</p>
+                        <img id="computer-dice-2" src="images/dice1.png" alt="Computer Dice 2">
+                    </div>
+                </div>
+                <div class="score">
+                    <div class="score-box">
+                        <p>Score this Round</p>
+                        <p id="computer-round-score">0</p>
+                    </div>
+                    <div class="score-box">
+                        <p>Total Score</p>
+                        <p id="computer-total-score">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="roll-button">Roll Dice</button>
+            <button id="reset-button">New Game</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <div class="instructions">
+        <h2>How to Play: <span id="toggle-howto">(show)</span></h2>
+        <ul id="howto">
+            <li>To start, click the 'Roll Dice' button.</li>
+            <li>To advance to the next round, click the 'Roll Dice' button again.</li>
+            <li>After three rounds, the game is over and the final score is calculated.</li>
+        </ul>
+    </div>
+    <div class="instructions">
+        <h2>Rules: <span id="toggle-rules">(show)</span></h2>
+        <ul id="rules">
+            <li>If any of the player's two dice comes up as a 1 then the score for that round for the player is 0.</li>
+            <li>If the player rolls a pair of the same numbers then the player's score is the total of the two dice times 2.</li>
+            <li>If the player rolls any other combination of dice, the player's score is the total value of the two dice.</li>
+        </ul>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

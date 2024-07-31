@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 750px;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .player-section, .computer-section {
+    width: 48%;
+    padding: 10px;
+    background-color: #a3e9a4;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    display: flex;
+    align-items: center;
+  }
+  h2 img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+  }
+  
+  .dice {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+  
+  .dice .dice-box {
+    text-align: center;
+  }
+  .dice .dice-box p {
+    margin: 0;
+  }
+  .dice .dice-box img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .score {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .score .score-box {
+    text-align: center;
+    border: 1px solid #333;
+    padding: 5px;
+    background-color: #f5f5dc;
+    border-radius: 5px;
+    width: 45%;
+  }
+  
+  .buttons {
+    margin: 20px 0;
+  }
+  .buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .buttons button:first-of-type {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  .buttons button:last-of-type {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  #result {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .instructions {
+    background-color: #d3e7ff;
+    width: 80%;
+    max-width: 750px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+  .instructions h2 {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .instructions ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .scoreboard {
+      flex-direction: column;
+    }
+    .player-section, .computer-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .score .score-box {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

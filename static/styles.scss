@@ -1,0 +1,188 @@
+// SASS Variables
+$font-family: Arial, sans-serif;
+$background-color: #f0f0f0;
+$text-color: #333;
+$container-bg-color: #fff;
+$container-padding: 20px;
+$container-border-radius: 8px;
+$container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$highlight-bg-color: #a3e9a4;
+$highlight-border-color: #FFFFFF;
+$highlight-border-radius: 50px;
+$highlight-border-size: 2px;
+$score-box-border-color: #333;
+$score-box-bg-color: #f5f5dc;
+$button-padding: 10px 20px;
+$button-font-size: 16px;
+$button-border-radius: 5px;
+$button-first-bg-color: #4CAF50;
+$button-first-color: #fff;
+$button-last-bg-color: #f44336;
+$button-last-color: #fff;
+$instructions-bg-color: #d3e7ff;
+$instructions-padding: 20px;
+$instructions-margin-top: 20px;
+$instructions-border-radius: 8px;
+
+@mixin flex-center($flex-direction: column) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $flex-direction;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  @include flex-center(column);
+  height: 100vh;
+  margin: 0;
+  padding: $container-padding;
+  box-sizing: border-box;
+}
+
+.container {
+  background: $container-bg-color;
+  padding: $container-padding;
+  border-radius: $container-border-radius;
+  box-shadow: $container-box-shadow;
+  text-align: center;
+  width: 80%;
+  max-width: 750px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  padding: $container-padding;
+  box-sizing: border-box;
+}
+
+.player-section, .computer-section {
+  width: 48%;
+  padding: 10px;
+  background-color: $highlight-bg-color;
+  border-radius: $container-border-radius;
+  box-sizing: border-box;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: $highlight-border-size solid $highlight-border-color; /* Adding a white border */
+    border-radius: $highlight-border-radius; /* Optional: To give the border rounded corners */
+  }
+}
+
+.dice {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.dice .dice-box {
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.score {
+  display: flex;
+  justify-content: space-around;
+}
+
+.score .score-box {
+  text-align: center;
+  border: 1px solid $score-box-border-color;
+  padding: 5px;
+  background-color: $score-box-bg-color;
+  border-radius: $button-border-radius;
+  width: 45%;
+}
+
+.buttons {
+  margin: 20px 0;
+
+  button {
+    padding: $button-padding;
+    margin: 5px;
+    border: none;
+    border-radius: $button-border-radius;
+    cursor: pointer;
+    font-size: $button-font-size;
+
+    &:first-of-type {
+      background-color: $button-first-bg-color;
+      color: $button-first-color;
+    }
+
+    &:last-of-type {
+      background-color: $button-last-bg-color;
+      color: $button-last-color;
+    }
+  }
+}
+
+#result {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.instructions {
+  background-color: $instructions-bg-color;
+  width: 80%;
+  max-width: 750px;
+  padding: $instructions-padding;
+  border-radius: $instructions-border-radius;
+  box-shadow: $container-box-shadow;
+  margin-top: $instructions-margin-top;
+  box-sizing: border-box;
+
+  h2 {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .scoreboard {
+    flex-direction: column;
+  }
+  .player-section, .computer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .score .score-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
